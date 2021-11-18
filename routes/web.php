@@ -22,4 +22,4 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('profile/edit', 'ProfileController@edit');
 });
 
-    // Route::get('XXXXXX.jp/XXX', 'AAAController@bbb');
+    // Route::get('XXX', 'AAAController@bbb');
