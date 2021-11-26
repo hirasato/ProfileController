@@ -17,6 +17,7 @@ class CreateProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name'); // 氏名を保存するカラム
             $table->string('gender');  // 性別を保存するカラム
+            $table->string('hobby');  //趣味を保存するカラム
             $table->string('introduction');  // 自己紹介欄を保存するカラム
             $table->timestamps();
         });
