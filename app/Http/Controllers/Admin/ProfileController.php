@@ -22,6 +22,9 @@ class ProfileController extends Controller
       $profile = new Profile;
       $form = $request->all();
       
+      // フォームから送信されてきた_tokenを削除する
+      unset($form['_token']);
+      
       // データベースに保存する
       $profile->fill($form);
       $profile->save();
@@ -34,7 +37,7 @@ class ProfileController extends Controller
         // Profile Modelからデータを取得する
       $profile = Profile::find($request->id);
       
-      return view('admin.profile.edit', ['news_form' => $profile]);
+      return view('admin.profile.edit', ['profile_form' => $profile]);
     }
 
     public function update()
