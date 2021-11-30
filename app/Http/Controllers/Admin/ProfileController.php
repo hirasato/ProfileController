@@ -62,6 +62,7 @@ class ProfileController extends Controller
         $history_profile->profile_id = $profile->id;
         $history_profile->edited_at = Carbon::now();
         $history_profile->save();
+    return redirect('admin/profile/');
     }
        public function delete(Request $request)
     {
